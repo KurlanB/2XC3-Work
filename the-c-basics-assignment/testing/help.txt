@@ -1,0 +1,62 @@
+				User Commands				
+
+convert - Version 1.0.0
+
+NAME
+	convert - reads long integers from standard input and displays the numbers converted
+	to a new radix(base).
+
+USAGE
+	Usage: convert [-b BASE] [-r START FINISH]
+		1 < BASE < 37
+		START and FINISH are long integers.
+
+DESCRIPTION
+
+	convert reads long integers in base 10 from standard input and converts them
+	into a different radix. If [-b BASE] is used, then it changes the base to the given BASE, 
+	else it converts to base 16. If [-r START FINISH] is entered, then displays converted
+	numbers from starting value to finish value.
+
+OPTIONS
+
+Generic Program Information
+	--help  Opens this page of usage and information.
+
+Argument information
+	-b  Accepts a BASE, which is the desired radix to convert to
+	-r  Accepts a START and FINISH, instead or reading from standard input, 
+	    converts the numbers from START to FINISH.
+
+EXIT STATUS
+	When program run successfully and end with EOF, exit status is 0, if error is run into, 
+	exits with 1.
+
+EXAMPLE
+	The following example outputs the number of radix 16 'FF'.
+	The standard input is 255, which represents the base 10 value.
+
+	/$ convert
+	   255
+	   FF
+
+	The following example outputs the number of radix 2 '10'.
+	The argument '-b 2' represents the conversion to radix 2.
+	The standard input is 2, which represents the base 10 value.
+
+	/$ convert -b 2
+	   2
+	   10
+	The following example outputs the number of radix 16 '-11 -10 -1 0 1 10 11'.
+	The argument '-b 2' represents the base to be converted to.
+	The argument '-r -3 3' represents the start and finishing numbers to convert.
+
+	/$ convert -b 2 -r -3 3
+	   -11
+	   10
+	   -1
+	   0
+	   1
+	   10
+	   11
+

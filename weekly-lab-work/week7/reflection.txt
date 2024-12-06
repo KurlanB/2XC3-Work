@@ -1,0 +1,7 @@
+Pointers in Arrays
+
+The advantage of using pointers with arrays is that when looking for values in the array it does not require finding the index and then passing that through the original array. Instead, we can just point to the values directly in the array and iterate through by changing the address we're at. This can save memory space and promote efficiency.
+
+The disadvantage is that it is very complex to implement pointers and when adding or modifying the code it becomes easier for bugs to appear. Also, fixing those bugs can become a very tedious task when trying to locate where each pointer is refering to, and what values they should have.
+
+I prefer using the indices style because it is easier for me to keep track of the index my code is currently on. It also becomes easier to read and debug.  

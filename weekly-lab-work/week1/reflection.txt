@@ -1,0 +1,8 @@
+Hi,
+
+During this lab, I've learned about Linux file management, vim and shell scripting.
+
+I am excited to learn about Git and GitHub to manage my projects and help me in the workplace.
+
+I am worried about having to remember all the syntax and rules from all the languages learned.
+It will not be easy for the tests and exams.

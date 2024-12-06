@@ -1,0 +1,22 @@
+Exercise 3
+6.
+	a) I think it is time efficient to remove the function calls, in the original primes program, 		 I received a runtime of 3.5845 seconds. After removing the function calls, it was a time of 	       3.4672 seconds which is significantly faster. If the program had to calculate a larger 
+	   amount of numbers, this change would greatly affect the amount of time the program runs. 
+	   For simple functions like quickcheck and checkfactor, it also improves the quality of the 
+	   code, as there aren't as much lines to define a simple function. 
+
+	b) I think that using parametrized macros is a lot better, because you don't have to type out 
+	   the function definition again everywhere in the code. Macros work almost the same way as 
+	   calling the function, except that they just replace the function name with it's definition,
+	   instead of calling it, passing arguments and returning a value. 
+
+Exercise 4
+6.
+	c) Based on the evidence of the gprof report, changing the algorithm improved the runtime a
+	   a lot more than removing the function calls. The runtime for the changed algorithm was
+	   0.0273 seconds, which is almost a full 3 seconds faster than all the other programs. The
+	   gprof also shows a 0% time usage for all functions and the checkfactor function was called
+	   a lot less times.
+	
+	d) When the function cannot be optimized any further and the amount of times the function is
+	   called cannot be changed, it would still be a good idea to remove function calls. 

@@ -1,0 +1,27 @@
+# A program to compare values lexicographically
+# Kurlan Beeharry
+# September 26, 2024
+
+#!/bin/bash
+
+# Error when argument count is incorrect
+if [[ $# != 2 ]]
+then
+	echo "Two arguments required" >&2
+	exit 1
+
+# When both values are equal
+elif [[ $1 = $2 ]] 
+then
+	echo "Arguments are the same" >&2
+	exit 1
+
+#When values are different display smaller
+elif [[ $1 < $2 ]]
+then
+	echo $1
+	exit 0
+else
+	echo $2
+	exit 0
+fi

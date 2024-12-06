@@ -1,0 +1,29 @@
+1. REGEX = "REGEX, hehehREGEXolol, REGEXREGEXREGEX"
+	!= "regex, REEGEEX, XEGER"  
+   
+^re*ge+x = "regex, reeegeeex, rgex"
+	!= "rgx, reregex, regegex"
+
+[^regex] = "REGEX, allo, abcdefg"
+	!= "regex, xeger, reg"
+   
+(reg){0,2}ex = "ex, regex, regregex"
+	    != " regreg, REGEX, reeegex"
+
+re?g?ex = "rex, regex, reex"
+       != "reegeex, REGEX, ex"
+   
+^(reg|REG)(ex)\2\1$ = "regexexreg, REGexexREG"
+		   != "regex, REGEX, regexregex"
+
+2. 
+a(ab)*a -> "aaba, aabababa"
+ab+c -> "abc"
+a.[bc]+ -> "abc, abbbbbbbb, azc, abcbcbcbc, asccbbbbcbcccc"
+abc|xyz -> "abc, xyz"
+[a-z]+[\.\?!] -> "swamping., undulate?"
+[a-zA-Z]*[^,]= -> "Putt=, Brittle =, Other.="
+[a-z][\.\?!]\s+[A-Z] -> "g.  H,  i? J"
+<[^>]+> -> "<an xml tag>, <opentag>, <closetag>, </closetag>, <with attribute="77"> "
+(very )+(important )?(tall|well-dressed) person -> "very very well-dressed person"
+

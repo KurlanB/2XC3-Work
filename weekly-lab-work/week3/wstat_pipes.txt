@@ -1,0 +1,5 @@
+cat ~/2XC3-data/gutenberg/spanish/nazarin.txt | ./splt | wc | ./wstat
+cat ~/2XC3-data/gutenberg/spanish/* | ./splt | wc | ./wstat
+cat ~/2XC3-data/gutenberg/spanish/* | ./splt | head -100 | wc | ./wstat
+cat ~/2XC3-data/gutenberg/spanish/* | ./splt | tail -100 | wc | ./wstat
+cat ~/2XC3-data/gutenberg/spanish/* | ./splt | sort | uniq -u | wc | ./wstat

@@ -1,0 +1,28 @@
+# A program to identify different types in a directory
+# Kurlan Beeharry
+# September 26, 2024
+
+#!/bin/bash
+for item in "$@"
+do
+	# Erro when no arguments are found 
+	if [[ $# = 0 ]]
+	then
+		echo "No arguments found" >&2
+		exit 1
+	
+	# Display type when file found
+	elif [[ -f $item ]]
+	then
+		echo "file: $item"
+
+	# Display when directory found
+	elif [[ -d $item ]]
+	then
+		echo "directory: $item"
+
+	# Display when unknown argument passed	
+	else
+		echo "unknown: $item"
+	fi
+done

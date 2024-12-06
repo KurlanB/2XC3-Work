@@ -1,0 +1,6 @@
+1. My experience with C since the start of this course has been very pleasant, because it is very similar to the language I work with the most, which is Java. 
+Their syntax are almost the same and the data types and everything are also similar. 
+
+2. The biggest advantage with C compared to java is that it does not require a lot of setup because it is a low level programming language unlike Java, which needs a lot of things to be downloaded and setup before starting to run programs.
+
+3.One of the biggest disadvantages of C is that string manipulation is harder, the string properties must be defined in every program, making them really long. Java has a string Object to hold all the string properties and functions, making it a lot easier to implement it to any program. 

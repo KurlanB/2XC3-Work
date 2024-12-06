@@ -1,0 +1,21 @@
+# A split word program
+# Kurlan Beeharry
+# September 26, 2024
+
+#!/bin/bash
+
+if [[ $# -gt 0 ]]
+then
+	echo "usage: bashsplit (no arguments)" >&2
+	exit 1
+fi
+
+# Reading each line in the input
+while read line
+do
+	# In each line, display each word
+	for item in $line
+	do 
+		echo $item
+	done
+done

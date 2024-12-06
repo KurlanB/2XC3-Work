@@ -1,0 +1,17 @@
+====================================================
+
+	The & Operator and it's Side Effect
+
+====================================================
+
+I think it is an interesting feature in C that can be useful to manage variables.
+
+Advantages:
+- The & operator is very useful to modify variables when passed through a function, it allows for direct modificatino through the reference without needing to return and re-assign the variable again.
+
+- It also helps save some memory space because there is no need to use extra local variables everytime a function is used. 
+
+Disadvantages: 
+- Pointers can become very confusing when using multiple functions and multiple files.
+
+- Very easy to result in a lot of bugs and errors. 

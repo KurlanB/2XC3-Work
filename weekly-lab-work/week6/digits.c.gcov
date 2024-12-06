@@ -1,0 +1,51 @@
+        -:    0:Source:digits.c
+        -:    0:Graph:testdigits-digits.gcno
+        -:    0:Data:testdigits-digits.gcda
+        -:    0:Runs:2
+        -:    1:/* The digits function definition
+        -:    2: * 
+        -:    3: * Kurlan Beeharry, Mcmaster University, 2024
+        -:    4: */
+        -:    5:
+        -:    6:#include <stdlib.h>
+        -:    7:#include <stdio.h>
+        -:    8:
+        -:    9:
+        -:   10:/* digits function
+        -:   11: *
+        -:   12: * Counts the sum of all digits in given number and finds the max and min
+        -:   13: * Input: Number of long type
+        -:   14: * Output: Returns sum of digits
+        -:   15: */
+        -:   16:
+       10:   17:int digits(long n, int * max, int * min) {
+       10:   18:	int sum = 0; 
+       10:   19:	*min = 100;
+       10:   20:	*max = -100;
+       10:   21:	n = abs(n);
+        -:   22:
+        -:   23:	do{
+        -:   24:		// Finding digit from remainder of division by 10
+        -:   25:
+       30:   26:		int digit = n % 10;
+        -:   27:
+        -:   28:		// Assigning new max and min numbers
+       30:   29:		if(digit > *max){
+       16:   30:			*max = digit;
+        -:   31:		}
+        -:   32:
+       30:   33:		if(digit < *min){
+       22:   34:			*min = digit;
+        -:   35:		}
+        -:   36:
+        -:   37:		// Adding digits to sum
+       30:   38:		sum += digit;
+        -:   39:
+        -:   40:		// Removing digit that's been counted
+       30:   41:		n /= 10;
+        -:   42:		
+       30:   43:	}while(n > 0);
+        -:   44:	
+       10:   45:	return sum;
+        -:   46:}
+        -:   47:

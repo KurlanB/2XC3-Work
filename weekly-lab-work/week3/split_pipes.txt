@@ -1,0 +1,6 @@
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u | wc -l
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u | tee lexicon.txt | wc -l
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u | head -1
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u | tail -1
+cat ~/2XC3-data/gutenberg/english/* | ./splt | sort | uniq -u | head -9998 | tail +9998

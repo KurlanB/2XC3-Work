@@ -1,0 +1,32 @@
+name: build script for clean utility
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: build clean
+        run: make clean
+
+      - name: upload clean
+        uses: actions/upload-artifact@v4
+        with:
+          name: Clean utility
+          path: ./clean
+
+
+      - name: build test
+        run: ./clean < wbcd.txt > cleaned_wbcd.txt
+
+      - name: upload clean results
+        if: ${{ always() }}
+  
+        uses: actions/upload-artifact@v4
+        with:
+          name: Cleaned file
+          path: ./cleaned_wbcd.txt

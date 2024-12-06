@@ -1,0 +1,6 @@
+# This is a simple greeting script
+# Kurlan Beeharry
+# September 26, 2024
+
+#!/bin/bash
+echo "Hello $1 $3! May I call you $2?"
